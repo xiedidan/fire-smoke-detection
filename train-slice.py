@@ -162,6 +162,8 @@ elif ATTENTION == 'cbam':
         Channel_Attention(resnet.feature_size, R),
         Spartial_Attention(K)
     )
+elif ATTENTION == 'non_local':
+    attention = NonLocalBlockND(resnet.feature_size)
 else:
     attention = None
 
